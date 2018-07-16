@@ -9,6 +9,7 @@ Top Needs dependencies
 
 Teach materials
 
+- mongodb-driver-[official](https://github.com/mongodb/mongo-go-driver/blob/master/mongo/doc.go)
 - [Awesome go](https://github.com/avelino/awesome-go)
 - Russian site with useful articles [4gophers](https://4gophers.ru)
 - Books and screencast [stackoverflow](https://ru.stackoverflow.com/questions/436505/Книги-документация-статьи-и-курсы-по-go)
