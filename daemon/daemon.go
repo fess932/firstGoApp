@@ -7,14 +7,16 @@ import (
 	"os/signal"
 	"syscall"
 
-	"../db"
-	"../ui"
+	"github.com/grisha/gowebapp/db"
+	"github.com/grisha/gowebapp/model"
+	"github.com/grisha/gowebapp/ui"
 )
 
 type Config struct {
 	ListenSpec string
-	Db         db.Config
-	UI         ui.Config
+
+	Db db.Config
+	UI ui.Config
 }
 
 func Run(cfg *Config) error {
@@ -22,7 +24,7 @@ func Run(cfg *Config) error {
 
 	db, err := db.InitDb(cfg.Db)
 	if err != nil {
-		log.Printf("Error creating listener: %v\n", err)
+		log.Printf("Error initializing database: %v\n", err)
 		return err
 	}
 
