@@ -1,5 +1,8 @@
 # gowebapp
 
+- Курс первый [вводный](https://www.coursera.org/learn/golang-webservices-1/home/welcome)
+- Курс второй [вебный](https://www.coursera.org/learn/golang-webservices-2/lecture/jLqQf/o-chiem-etot-kurs)
+
 Top Needs dependencies
 
 - Testing tool [goconvey](http://goconvey.co)
@@ -29,6 +32,13 @@ Teach materials
 - [Awesome go](https://github.com/avelino/awesome-go)
 - Russian site with useful articles [4gophers](https://4gophers.ru)
 - Books and screencast [stackoverflow](https://ru.stackoverflow.com/questions/436505/Книги-документация-статьи-и-курсы-по-go)
+- Введение в [go](http://golang-book.ru)
+- [Тур по го](https://go-tour-ru-ru.appspot.com/flowcontrol/2)
+
+[x] - завершен  
+[x] - завершен
+[]  - хавершен
+[]  - нет
 
 Ready packages
 
