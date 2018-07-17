@@ -9,6 +9,7 @@ Top Needs dependencies
 - Task Runner [realize](https://gorealize.io)
 - Http framework/router [chi](https://github.com/go-chi/chi)
 - [Mongo driver](https://github.com/mongodb/mongo-go-driver)
+- Go [graphql](https://github.com/graphql-go/graphql)
 
 > Umputun
 > я по библитекам минималист, но без фанатизма :) Иx на самом деле у меня совсем немного, вот список примерно всего, что используется (понабирал из разных проектов)
@@ -35,10 +36,10 @@ Teach materials
 - Введение в [go](http://golang-book.ru)
 - [Тур по го](https://go-tour-ru-ru.appspot.com/flowcontrol/2)
 
-[x] - завершен  
-[x] - завершен
-[]  - хавершен
-[]  - нет
+- [x] завершен  
+- [x] - завершен
+- [ ]  - хавершен
+- []  - нет
 
 Ready packages
 
