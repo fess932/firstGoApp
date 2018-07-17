@@ -7,6 +7,22 @@ Top Needs dependencies
 - Http framework/router [chi](https://github.com/go-chi/chi)
 - [Mongo driver](https://github.com/mongodb/mongo-go-driver)
 
+> Umputun
+> я по библитекам минималист, но без фанатизма :) Иx на самом деле у меня совсем немного, вот список примерно всего, что используется (понабирал из разных проектов)
+> 1. github.com/pressly/chi
+> 2. github.com/dgrijalva/jwt-go
+> 3. github.com/stretchr/testify
+> 4. gopkg.in/mgo.v2
+> 5. gopkg.in/yaml.v2
+> 6. github.com/didip/tollbooth
+> 7. github.com/juju/ratelimit
+> 8. github.com/hashicorp/go-mul...
+> 9. github.com/aws/aws-sdk-go/...
+> 10. github.com/dustin/go-humanize
+> 11. github.com/jessevdk/go-flags
+> 12. golang.org/x/sync/errgroup
+
+
 Teach materials
 
 - mongodb-driver-[official](https://github.com/mongodb/mongo-go-driver/blob/master/mongo/doc.go)
@@ -41,3 +57,5 @@ $ go get github.com/grisha/gowebapp
 ```
 $ $GOPATH/bin/gowebapp
 ```
+
+
