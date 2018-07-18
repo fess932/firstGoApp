@@ -6,8 +6,8 @@
 
 Top Needs dependencies
 
-- Testing tool [goconvey](http://goconvey.co)
-- Task Runner [realize](https://gorealize.io)
+- Testing tool [goconvey](github.com/smartystreets/goconvey)
+- Task Runner [realize](github.com/oxequa/realize)
 - Http framework/router [chi](https://github.com/go-chi/chi)
 - [Mongo driver](https://github.com/mongodb/mongo-go-driver)
 - Go [graphql](https://github.com/graphql-go/graphql)

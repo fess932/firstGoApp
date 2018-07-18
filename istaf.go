@@ -29,14 +29,14 @@ func (s stuff) SomeComplex() {
 	s.DoStuff()
 }
 
-func main() {
-	r := realStuff("hey")
-	f := fakeStuff(0)
+// //func main() {
+// 	r := realStuff("hey")
+// 	f := fakeStuff(0)
 
-	rS := stuff{r, "stuff"}
+// 	rS := stuff{r, "stuff"}
 
-	rS.SomeComplex()
+// 	rS.SomeComplex()
 
-	fS := stuff{f, "fake"}
-	fS.DoStuff()
-}
+// 	fS := stuff{f, "fake"}
+// 	fS.DoStuff()
+// }
