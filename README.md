@@ -2,6 +2,7 @@
 
 - [ ] Курс первый [вводный](https://www.coursera.org/learn/golang-webservices-1/home/welcome)
 - [ ] Курс второй [вебный](https://www.coursera.org/learn/golang-webservices-2/lecture/jLqQf/o-chiem-etot-kurs)
+- [ ] Тот же курс, вид с [youtube](https://www.youtube.com/watch?v=9Ia16QOY8rk&index=2&list=PLrCZzMib1e9q-X5V9pTM6J0AemRWseM7I)
 
 Top Needs dependencies
 
