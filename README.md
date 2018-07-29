@@ -6,8 +6,8 @@
 
 Top Needs dependencies
 
-- Testing tool [goconvey](github.com/smartystreets/goconvey)
-- Task Runner [realize](github.com/oxequa/realize)
+- Testing tool [goconvey](https://github.com/smartystreets/goconvey)
+- Task Runner [realize](https://github.com/oxequa/realize)
 - Http framework/router [chi](https://github.com/go-chi/chi)
 - [Mongo driver](https://github.com/mongodb/mongo-go-driver)
 - Go [graphql](https://github.com/graphql-go/graphql)
@@ -35,7 +35,7 @@ Teach materials
 - [ ] Russian site with useful articles [4gophers](https://4gophers.ru)
 - [ ] Books and screencast [stackoverflow](https://ru.stackoverflow.com/questions/436505/Книги-документация-статьи-и-курсы-по-go)
 - [ ] Введение в [go](http://golang-book.ru)
-- [x	] [Тур по го](https://go-tour-ru-ru.appspot.com/flowcontrol/2)
+- [ ] [Тур по го](https://go-tour-ru-ru.appspot.com/flowcontrol/2)
 
 Ready packages
 

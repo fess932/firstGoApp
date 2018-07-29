@@ -1,7 +1,13 @@
 package main
 
+import (
+	"reflect"
+)
+
 func showMeTheType(i interface{}) string {
-	return ""
+	iType := reflect.TypeOf(i)
+	return nil
+
 }
 
 func main() {
