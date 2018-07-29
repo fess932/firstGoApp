@@ -3,7 +3,7 @@ settings:
     force: false
     interval: 100ms
 schema:
-- name: webapp
+- name: firstWebApp
   path: .
   commands:
     run:

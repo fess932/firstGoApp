@@ -4,10 +4,8 @@ import (
 	"reflect"
 )
 
-func showMeTheType(i interface{}) string {
-	iType := reflect.TypeOf(i)
-	return nil
-
+func showMeTheType(v interface{}) string {
+	return reflect.TypeOf(v).String()
 }
 
 func main() {
