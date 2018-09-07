@@ -9,13 +9,14 @@ import (
 
 type player struct {
 	name     string
-	position room
+	position *room
 }
 
 type room struct {
-	about   string
-	route   map[string]room
-	actions map[string]func()
+	name  string
+	about string
+	route []string
+	// actions map[string]func()
 }
 
 func (p *player) watch() {
@@ -23,35 +24,47 @@ func (p *player) watch() {
 }
 
 func (p *player) move(s string) {
-	If p.position = rooms[s]
+	if p.position.name == s {
+		fmt.Printf("Вы уже в комнате %v \n", s)
+		return
+	}
+	if p.position.name == "" {
+		fmt.Printf("Нет такой комнаты %v !", s)
+		return
+	}
+	p.position = rooms[s]
+	p.watch()
+	return
+
 }
 
 func (p *player) use(o, s string) {
 	p.position = rooms[s]
 }
 
-var rooms = map[string]room{
+var rooms = map[string]*room{
 	"кухня": {
+		name:  "кухня",
 		about: "ты находишься на кухне, на столе чай, надо собрать рюкзак и идти в универ. можно пройти - коридор",
-		actions: map[string]func(){
-			"USE": func() {},
-		},
-		route: {
-			"коридор": rooms["коридор"],
-		},
+		// actions: map[string]func(){
+		// 	"USE": func() {},
+		// },
+		route: []string{"коридор"},
 	},
 	"коридор": {
+		name:  "коридор",
 		about: "ничего интересного. можно пройти - кухня, комната, улица",
-		actions: map[string]func(){
-			"USE": func() {},
-		},
-		route: {
-			"кухня": rooms["кухня"],
-		},
+		// actions: map[string]func(){
+		// 	"USE": func() {},
+		// },
+		route: []string{"кухня"},
 	},
 }
 
-var mainPlayer = player{name: "ты", position: rooms["кухня"]}
+var mainPlayer = player{
+	name:     "ты",
+	position: rooms["кухня"],
+}
 
 // var rooms = []room {
 // 	room{name: "main", answers: ["осмотреться"]}
@@ -64,15 +77,19 @@ func main() {
 func initGame() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Добро пожаловать в игру!")
-	text, _, _ := reader.ReadLine()
 
 	// if arr[0] == "осмотреться" {
 	// 	fmt.Println("ты находишься на кухне, на столе чай, надо собрать рюкзак и идти в универ. можно пройти - коридор")
 	// }
 	mainPlayer.watch()
-	mainPlayer.move("коридор")
-	mainPlayer.watch()
-	handleCommand(string(text))
+	// mainPlayer.move("коридор")
+	// mainPlayer.watch()
+	for {
+		text, _, _ := reader.ReadLine()
+		fmt.Println("Ваши действия")
+		handleCommand(string(text))
+	}
+
 }
 
 func handleCommand(input string) string {
@@ -90,8 +107,13 @@ func handleCommand(input string) string {
 	switch {
 	case command == "осмотреться":
 		mainPlayer.watch()
+
 	case command == "идти":
 		mainPlayer.move(param1)
+
+	case command == "применить":
+		mainPlayer.use(param1, param2)
 	}
-	return command
+	return "LEL"
+
 }
