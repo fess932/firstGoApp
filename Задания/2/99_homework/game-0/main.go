@@ -25,13 +25,15 @@ func (p *player) watch() {
 
 func (p *player) move(s string) {
 	if p.position.name == s {
+
 		fmt.Printf("Вы уже в комнате %v \n", s)
 		return
 	}
-	if p.position.name == "" {
-		fmt.Printf("Нет такой комнаты %v !", s)
+	if p.position.name == "" || rooms[s] == nil {
+		fmt.Printf("нет пути в %v", s)
 		return
 	}
+
 	p.position = rooms[s]
 	p.watch()
 	return
@@ -61,10 +63,9 @@ var rooms = map[string]*room{
 	},
 }
 
-var mainPlayer = player{
-	name:     "ты",
-	position: rooms["кухня"],
-}
+var mainPlayer player
+
+var reader = bufio.NewReader(os.Stdin)
 
 // var rooms = []room {
 // 	room{name: "main", answers: ["осмотреться"]}
@@ -75,20 +76,17 @@ func main() {
 }
 
 func initGame() {
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Добро пожаловать в игру!")
-
+	mainPlayer.name = "YOU"
+	mainPlayer.position = rooms["КУХНЯ"]
 	// if arr[0] == "осмотреться" {
 	// 	fmt.Println("ты находишься на кухне, на столе чай, надо собрать рюкзак и идти в универ. можно пройти - коридор")
 	// }
-	mainPlayer.watch()
 	// mainPlayer.move("коридор")
-	// mainPlayer.watch()
-	for {
-		text, _, _ := reader.ReadLine()
-		fmt.Println("Ваши действия")
-		handleCommand(string(text))
-	}
+	mainPlayer.watch()
+	// for {
+	// 	text, _, _ := reader.ReadLine()
+	// 	handleCommand(string(text))
+	// }
 
 }
 
@@ -96,7 +94,6 @@ func handleCommand(input string) string {
 	arr := strings.Split(input, " ")
 	command := arr[0]
 	var param1, param2 string
-
 	if len(arr) == 2 {
 		param1 = arr[1]
 	}
@@ -109,11 +106,20 @@ func handleCommand(input string) string {
 		mainPlayer.watch()
 
 	case command == "идти":
+		fmt.Print(input)
+		if param1 == "" {
+			fmt.Print("Укажите куда идти")
+			break
+		}
+
 		mainPlayer.move(param1)
 
 	case command == "применить":
 		mainPlayer.use(param1, param2)
+	default:
+		fmt.Print("неизвестная команда")
 	}
+
 	return "LEL"
 
 }
